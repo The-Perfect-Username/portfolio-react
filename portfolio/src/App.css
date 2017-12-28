@@ -1,28 +1,543 @@
-.App {
-  text-align: center;
+html,
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+body {
+    overflow-x: hidden;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+* {
+    font-family: "Tahoma";
 }
 
-.App-title {
-  font-size: 1.5em;
+p {
+    color: #5c5c5c;
 }
 
-.App-intro {
-  font-size: large;
+a {
+    text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+i.fa {
+    vertical-align: top;
+}
+
+header {
+    top: 0;
+    border-bottom: 1px solid #d6d6d6;
+    height: 100px;
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    z-index: 1;
+}
+
+    header a#goToTop {
+        display: inline-block;
+        font-size: 2em;
+        position: absolute;
+        left: 50px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #ccc;
+        transition: color .2s ease-in-out;
+    }
+
+    header a#goToTop:hover {
+        color: #aaa;
+    }
+
+    header nav {
+        position: absolute;
+        top: 50%;
+        right: 100px;
+        transform: translateY(-50%);
+    }
+
+        header nav a {
+            margin: 0 10px;
+            color: #aaa;
+        }
+
+        header nav a:hover,
+        header nav a.selected {
+            color: #0099ff;
+        }
+
+
+main {
+    position: relative;
+    padding-bottom: 100px;
+}
+
+footer {
+    height: 100px;
+    border-top: 1px solid #d6d6d6;
+    position: relative;
+}
+
+    footer nav {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -35%);
+    }
+
+        footer nav a {
+            margin: 0 20px;
+            font-size: 2em;
+            color: #aaa;
+            transition: color .2s ease-in-out;
+            padding: 0 !important;
+        }
+
+        footer nav a:hover {
+            color: #0099ff;
+        }
+
+
+section {
+    position: relative;
+}
+
+.title-tag {
+    background: #0099ff;
+    display: inline-block;
+    position: relative;
+    margin: auto;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 15px 30px;
+}
+
+    .title-tag p {
+        padding: 0;
+        margin: 0;
+        color: #fff;
+        font-weight: 600;
+        font-size: 1.4em;
+        text-align: center;
+        letter-spacing: 1px;
+    }
+
+.tag-pointer {
+    position: absolute;
+    border: 10px solid #0099ff;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    display: inline-block;
+    left: 50%;
+    transform: translate(-50%, 75%);
+}
+
+.content {
+    width: 900px;
+    position: relative;
+    left: 50%;
+    margin-top: 60px;
+    transform: translateX(-50%);
+}
+
+.content p {
+    line-height: 35px;
+    font-size: 1.1em;
+}
+
+.portfolio-info p {
+    line-height: 23px;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+/********************************************
+Typed cursor animation
+********************************************/
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+    font-size: 1.8em;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+
+/**********************************
+Header section
+**********************************/
+section#header {
+    margin-top: 100px;
+    height: calc(70vh - 100px);
+    background: #f9f9f9;
+    border-bottom: 1px solid #d6d6d6;
+}
+
+#titleContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#mainTitle {
+    position: relative;
+    letter-spacing: 5px;
+    word-spacing: 20px;
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-size: 3em;
+	font-style: normal;
+	font-variant: normal;
+    padding: 0;
+    margin: 0;
+}
+
+#subtitle {
+    position: relative;
+    font-family: Courier;
+    font-size: 1.8em;
+	font-style: normal;
+	font-variant: normal;
+    color: #5c5c5c;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+/*******************************
+Overview Section
+*******************************/
+section#overview {
+    padding-top: 150px;
+    min-height: 400px;
+}
+
+/*******************************
+Portfolio Section
+*******************************/
+section#portfolio {
+    padding-top: 150px;
+    min-height: 400px;
+}
+
+.portfolio-item {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.portfolio-image {
+    height: 150px;
+    width: 33%;
+    display: inline-block;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    border: 1px solid #d6d6d6;
+}
+
+    .portfolio-image img {
+        width: 100%;
+    }
+
+.portfolio-info {
+    margin-left: 10px;
+    display: inline-block;
+    width: 65%;
+    vertical-align: top;
+}
+
+.portfolio-link {
+    color: inherit;
+    transition: color .2s ease-in-out;
+}
+.portfolio-link:hover {
+    color: #0099ff;
+}
+
+a#gitHubLink {
+    position: relative;
+    margin: 20px auto auto auto;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    padding: 12px 14px;
+    border: 2px solid #cc00cc;
+    color: #cc00cc;
+    background: #fff;
+    transition: color 0.2s ease-in-out, background 0.2s ease-in-out;
+}
+
+    a#gitHubLink:hover {
+        color: #fff;
+        background: #cc00cc;
+    }
+
+/*******************************
+Skills Section
+*******************************/
+section#skills {
+    padding-top: 150px;
+    min-height: 400px;
+}
+
+#skillsTable {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skill-block {
+    flex: auto;
+    width: 33%;
+    text-align: center;
+}
+
+    .skill-block ul {
+        list-style: none;
+        padding: 0;
+    }
+
+        .skill-block ul li {
+            padding: 5px 0;
+            letter-spacing: 2px;
+        }
+
+/****************************************
+Contact Section
+****************************************/
+section#contact {
+    padding-top: 150px;
+    min-height: 400px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    color: #0099ff;
+}
+
+input,
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    resize: none;
+    border: none;
+    border-bottom: 2px solid #0099ff;
+    padding: 12px 0;
+    font-size: 1.1em;
+    outline: none;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+textarea {
+    overflow: hidden;
+    height: 2.5em;
+    transition: height .5s ease-in-out;
+}
+
+textarea:focus {
+    height: 8em;
+}
+
+form button {
+    position: relative;
+    margin: auto;
+    left: 100%;
+    transform: translateX(-100%);
+    padding: 10px 30px;
+    font-size: 1em;
+    border: 2px solid #0099ff;
+    color: #0099ff;
+    background-color: #fff;
+    transition: color .2s ease-in-out, background-color .2s ease-in-out;
+}
+
+    form button:hover {
+        cursor: pointer;
+        color: #fff;
+        background-color: #0099ff;
+    }
+
+#formResponse {
+    color: #0099ff;
+    position: absolute;
+    right: 150px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+}
+
+#formBtnWrapper {
+    position: absolute !important;
+    height: auto;
+    width: 100%;
+}
+
+@media screen and (max-width: 480px) {
+
+    header a#goToTop {
+        font-size: 1.3em;
+        left: 20px;
+    }
+
+    header nav {
+        right: 10px;
+    }
+
+        header nav a {
+            margin: 0 5px;
+        }
+
+    #mainTitle {
+        font-size: 2em;
+    }
+
+    #subtitle {
+        font-size: 1em;
+    }
+
+    .content {
+        width: 100% !important;
+        padding: 0 30px;
+        box-sizing: border-box;
+    }
+
+    #overview p {
+        line-height: 30px;
+    }
+
+    .portfolio-item {
+        width: 100% !important;
+        position: relative;
+        left: auto;
+    }
+
+    .portfolio-image,
+    .portfolio-info {
+        width: 100%;
+        margin: 0;
+    }
+
+    .portfolio-info p {
+        font-size: 1em;
+    }
+
+    #formResponse {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        display: inline-block;
+        margin-top: 40px;
+    }
+
+    #formBtnWrapper {
+        position: relative !important;
+    }
+
+    form button {
+        position: relative;
+        width: 100%;
+
+    }
+}
+
+@media screen and (max-width: 380px) {
+
+    .portfolio-image {
+        height: 170px !important;
+    }
+
+}
+
+@media screen and (max-width: 321px) {
+
+    header a {
+        font-size: 0.85em;
+    }
+
+    #skills li {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    #titleContainer {
+        width: 80%;
+    }
+
+    .content {
+        width: 80%;
+    }
+
+    .content p {
+        text-align: left;
+    }
+
+    .tag-pointer {
+        margin-top: -1px;
+    }
+
+    .flex {
+        position: relative;
+    }
+
+    .portfolio-link {
+        display: inline;
+    }
+
+    .portfolio-item {
+        width: 60%;
+        display: inline-block;
+        position: relative;
+        margin: auto auto 20px auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .portfolio-image {
+        height: 200px;
+    }
+
+    .portfolio-image,
+    .portfolio-info {
+        width: 100%;
+        margin: 0;
+    }
+
+    .portfolio-info p {
+        font-size: 1em;
+    }
+
 }

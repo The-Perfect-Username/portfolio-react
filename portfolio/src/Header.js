@@ -13,7 +13,6 @@ class Header extends Component {
                         <a href='#overview'>Overview</a>
                         <a href='#portfolio'>Portfolio</a>
                         <a href='#skills'>Skills</a>
-                        <a href='#contact'>Contact</a>
                     </nav>
                 </header>
             </div>

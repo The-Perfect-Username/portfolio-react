@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SectionTag from './SectionTag';
 import './App.css';
 
 class Overview extends Component {
@@ -6,12 +7,7 @@ class Overview extends Component {
         return (
             <div>
                 <section id='overview'>
-                    <div class="content-head">
-                        <div class="title-tag">
-                            <p>Overview</p>
-                            <span class="tag-pointer"></span>
-                        </div>
-                    </div>
+                    <SectionTag title="Overview" />
                     <div class="content">
                         <p>
                             I'm a full-stack web developer from Brisbane, Australia. I enjoy creating dynamic web applications and solving complex problems

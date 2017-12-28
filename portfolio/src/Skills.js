@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SectionTag from './SectionTag';
 import './App.css';
 
 class Skills extends Component {
@@ -6,12 +7,7 @@ class Skills extends Component {
         return (
             <div>
                 <section id='skills'>
-                    <div class="content-head">
-                        <div class="title-tag">
-                            <p>Skills</p>
-                            <span class="tag-pointer"></span>
-                        </div>
-                    </div>
+                    <SectionTag title="Skills" />
                     <br />
                     <div class="content">
                         <div id='skillsTable'>
@@ -19,7 +15,7 @@ class Skills extends Component {
                                 <h4>Front-End</h4>
                                 <ul>
                                     <li>HTML5</li>
-                                    <li>CSS3</li>
+                                    <li>CSS3/SASS</li>
                                     <li>JavaScript</li>
                                     <li>jQuery</li>
                                     <li>React</li>
@@ -32,20 +28,22 @@ class Skills extends Component {
                                     <li>PHP</li>
                                     <li>Node</li>
                                     <li>Python</li>
-                                    <li>Ruby</li>
+                                    <li>Ruby on Rails</li>
                                     <li>SQL</li>
                                     <li>OOP</li>
                                     <li>MVC</li>
                                 </ul>
                             </div>
                             <div class="skill-block">
-                                <h4>More</h4>
+                                <h4>And More</h4>
                                 <ul>
                                     <li>Git</li>
                                     <li>Version Control</li>
-                                    <li>Dev Ops</li>
                                     <li>AWS</li>
                                     <li>RESTful APIs</li>
+                                    <li>Database Management</li>
+                                    <li>Software Engineering</li>
+                                    <li>Algorithm Complexity</li>
                                 </ul>
                             </div>
                         </div>
